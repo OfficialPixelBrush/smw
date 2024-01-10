@@ -198,7 +198,7 @@ def extra_lunar_magic_text():
 if LUNAR_MAGIC:
   s = get_bytes(0xFF0A0, 24).decode('utf8')
   print('Detected %s' % s, file = sys.stderr)
-  if s != 'Lunar Magic Version 3.33':
+  if s != 'Lunar Magic Version 3.30':
     raise Exception('Invalid Lunar Magic version. Expected 3.33, found "%s"\n' % s + extra_lunar_magic_text())
 
   if get_byte(0x6F540) != 0xc9:
